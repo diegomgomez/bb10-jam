@@ -79,6 +79,7 @@
     <configuration id="com.qnx.qcc.toolChain.1330503556" name="Simulator-Debug">
        <platformArchitecture>x86</platformArchitecture>
        <asset path="x86/o-g/Spore" entry="true" type="Qnx/Elf">Spore</asset>
+       <asset path="libbbplatformbbm.so" type="Qnx/Elf">lib/libbbplatformbbm.so</asset>
     </configuration>
     
     <!--  The icon for the application, which should be 86x86. -->
@@ -96,6 +97,7 @@
     
     <!-- Request permission to execute native code.  Required for native applications. -->
     <permission system="true">run_native</permission>
+    <permission>bbm_connect</permission>
     <env var="LD_LIBRARY_PATH" value="app/native/lib:/usr/lib/qt4/lib"/>
 
 </qnx>

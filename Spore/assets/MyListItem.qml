@@ -8,11 +8,14 @@ Container {
     
     Container { 
         id: item
-        scaleX: 0.9
-        scaleY: 0.9
+        scaleX: 0.95
+        scaleY: 0.95
+        topMargin: 0
+        bottomMargin: 0
+        leftMargin: 0
+        rightMargin: 0
         verticalAlignment: VerticalAlignment.Fill
         horizontalAlignment: HorizontalAlignment.Fill
-        topPadding: 5
         layout: DockLayout {}
         
         // show image
@@ -38,6 +41,27 @@ Container {
             
             verticalAlignment: VerticalAlignment.Bottom
         }
+        contextActions: [
+            ActionSet {
+                title: "Contact"
+                ActionItem {
+                    title: "Send an Email"
+                    imageSource: "asset:///images/email.png"
+                }
+                ActionItem {
+                    title: "Start a Chat"
+                    imageSource: "asset:///images/chat.png"
+                }
+                ActionItem {
+                    title: "Start a Video Conference"
+                    imageSource: "asset:///images/video.png"
+                }
+                ActionItem {
+                    title: "Delete"
+                    imageSource: "asset:///images/delete.png"
+                }
+            } // end of ActionSet
+        ]
     }
 
     // Set visual appearance of activated and selected item.
@@ -46,8 +70,8 @@ Container {
             item.scaleX = 1.0;
             item.scaleY = 1.0;
         } else {
-            item.scaleX = 0.9;
-            item.scaleY = 0.9;
+            item.scaleX = 0.95;
+            item.scaleY = 0.95;
         }
     }
 

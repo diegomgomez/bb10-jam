@@ -4,6 +4,7 @@ import bb.cascades 1.0
 TabbedPane {
     id: tabbedPane
     showTabsOnActionBar: true;
+    peekEnabled: true
     
     Tab {
         title: "Explore"

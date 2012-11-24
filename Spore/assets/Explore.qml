@@ -10,6 +10,7 @@ NavigationPane {
             }
             ListView {
                 id: listView
+                
                 // set object name to let listView to be discoverable from C++
                 objectName: "listView"
                 layout: GridListLayout {
@@ -26,10 +27,13 @@ NavigationPane {
                 onTriggered: {
                     console.log("selected_index: " + indexPath)
                     var selectedItem = dataModel.data(indexPath)
-                    
                     var page = itemViewDefinition.createObject();
-                    page.text = selectedItem.text
+                    page.title = selectedItem.text
                     page.image = selectedItem.image
+                    page.name = selectedItem.name
+                    page.price = selectedItem.price
+                    page.nint = selectedItem.nint
+                    page.distance = selectedItem.distance
                     navigationPane.push(page)
                 }
                 horizontalAlignment: HorizontalAlignment.Center
@@ -40,37 +44,7 @@ NavigationPane {
     attachedObjects: [
         ComponentDefinition {
             id: itemViewDefinition
-            content: Page {
-                property alias text: lblText.text
-                property alias image: imgView.imageSource
-                id: pgDetail
-                paneProperties: NavigationPaneProperties {
-                    backButton: ActionItem {
-                        onTriggered: {
-                            navigationPane.pop();
-                        }
-                    }
-                }
-                content: Container {
-                    layout: StackLayout {
-                    }
-                    Label {
-                        id: lblText
-                        textStyle.base: SystemDefaults.TextStyles.TitleText
-                        //textStyle.color: Color.Yellow
-                        horizontalAlignment: HorizontalAlignment.Center
-                    }
-                    ImageView {
-                        id: imgView
-                        scalingMethod: ScalingMethod.AspectFit
-                        layoutProperties: StackLayoutProperties {
-                            spaceQuota: 1.0 // the image fills rest of the Page
-                        }
-                        verticalAlignment: VerticalAlignment.Center
-                        horizontalAlignment: HorizontalAlignment.Center
-                    }
-                }
-            }
+            source: "ItemComponentDefinition.qml" 
         }
     ]
 }
