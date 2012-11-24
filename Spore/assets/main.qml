@@ -1,37 +1,64 @@
 // Grid view with detail project template
 import bb.cascades 1.0
 
-NavigationPane {
-    id: navigationPane
-    firstPage: Page {
-        id: pgMain
-        content: Container {
-            layout: DockLayout {
-            }
-            ListView {
-                id: listView
-                // set object name to let listView to be discoverable from C++
-                objectName: "listView"
-                layout: GridListLayout {}
-                listItemComponents: [
-                    // define component which will represent list item GUI appearence
-                    ListItemComponent {
-                        type: "item"
-                        // list item GUI appearence component is defined in external MyListItem.qml file
-                        MyListItem {}
-                    }
-                ]
-                onTriggered: {
-                    console.log("selected_index: " + indexPath)
-                    var curr_item = dataModel.data(indexPath)
-                    // show detail page for selected item
-                    setDetailItem(curr_item)
-                }
-                horizontalAlignment: HorizontalAlignment.Center
-                verticalAlignment: VerticalAlignment.Center
+TabbedPane {
+    id: tabbedPane
+    showTabsOnActionBar: true;
+    
+    Tab {
+        title: "Explore"
+        
+	    content: Page {
+	        id: pgMain
+	        content: Container {
+	            layout: DockLayout {
+	            }
+	            ListView {
+	                id: listView
+	                // set object name to let listView to be discoverable from C++
+	                objectName: "listView"
+	                layout: GridListLayout {}
+	                listItemComponents: [
+	                    // define component which will represent list item GUI appearence
+	                    ListItemComponent {
+	                        type: "item"
+	                        // list item GUI appearence component is defined in external MyListItem.qml file
+	                        MyListItem {}
+	                    }
+	                ]
+	                onTriggered: {
+	                    console.log("selected_index: " + indexPath)
+	                    var curr_item = dataModel.data(indexPath)
+	                    // show detail page for selected item
+	                    setDetailItem(curr_item)
+	                }
+	                horizontalAlignment: HorizontalAlignment.Center
+	                verticalAlignment: VerticalAlignment.Center
+	            }
+	        }
+	    }
+    }
+    
+    Tab {
+        title: "Sell"
+        
+        content: Page {
+            content: Label {
+                text: "This is tab 2."
             }
         }
     }
+    
+    Tab {
+        title: "Account"
+        
+        content: Page {
+            content: Label {
+                text: "This is tab 3."
+            }
+        }
+    }
+    
     attachedObjects: [
         ComponentDefinition {
             id: secondPageDefinition
