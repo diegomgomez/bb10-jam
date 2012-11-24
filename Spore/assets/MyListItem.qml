@@ -5,6 +5,7 @@ import bb.cascades 1.0
 Container {
     layout: DockLayout {
     }
+    
     Container {
         // this container is used to show selection background when item is selected
         id: mySelectionContainer
@@ -12,25 +13,32 @@ Container {
         verticalAlignment: VerticalAlignment.Fill
         horizontalAlignment: HorizontalAlignment.Fill
     }
+    
     Container {
+        leftMargin: 2.0
+        rightMargin: 2.0
+        topMargin: 2.0
+        bottomMargin: 2.0
         verticalAlignment: VerticalAlignment.Fill
         horizontalAlignment: HorizontalAlignment.Fill
+        
         // show image
         ImageView {
             imageSource: ListItemData.thumb
-            scalingMethod: ScalingMethod.AspectFit
+            scalingMethod: ScalingMethod.AspectFill
             layoutProperties: StackLayoutProperties {
                 spaceQuota: 1.0
             }
-            horizontalAlignment: HorizontalAlignment.Center
-            verticalAlignment: VerticalAlignment.Center
+            horizontalAlignment: HorizontalAlignment.Fill
+            verticalAlignment: VerticalAlignment.Fill
         }
+        
         // and text below
-        Label {
-            text: ListItemData.text
-            textStyle.base: SystemDefaults.TextStyles.SmallText
-            horizontalAlignment: HorizontalAlignment.Center
-        }
+        //Label {
+        //    text: ListItemData.text
+        //    textStyle.base: SystemDefaults.TextStyles.SmallText
+        //    horizontalAlignment: HorizontalAlignment.Center
+        //}
     }
 
     // Set visual appearance of activated and selected item.
