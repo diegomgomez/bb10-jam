@@ -13,7 +13,7 @@ NavigationPane {
             }
         }
     }
-     
+    
     attachedObjects: [
         Page {
             id: firstPage
