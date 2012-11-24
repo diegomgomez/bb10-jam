@@ -3,7 +3,7 @@ TARGET = Spore
 
 CONFIG += qt warn_on debug_and_release cascades
 
-LIBS   += -lbbdata
+LIBS   += -lbbdata -lbbsystem
 
 INCLUDEPATH += ../src
 SOURCES += ../src/*.cpp

@@ -51,15 +51,13 @@ NavigationPane {
 		            orientation: LayoutOrientation.LeftToRight
 		        }
 		        
-		        ImageView {
-	    	        imageSource: "asset:///images/picture-thumb.png"
-	    	        scalingMethod: ScalingMethod.AspectFit
-	    	    }
-	    	    
-	    	    ImageView {
-	    	        imageSource: "asset:///images/picture-thumb.png"
-	    	        scalingMethod: ScalingMethod.AspectFit
-	    	    }
+		        Button {
+		            text: "Take a shoot!"
+		            onClicked: {
+		                var cam = myCamera.createObject(this);
+		                sellNavigationPane.push(cam);
+		            }
+		        }
 		    }    
 		    
 		    Label {
@@ -71,8 +69,9 @@ NavigationPane {
 		    }
 		    
 		    Button {
-		        text: "Profit!"
+		        text: "Submit spore!"
 		        horizontalAlignment: HorizontalAlignment.Center
+		        
 		    }
 		}
     }
@@ -82,6 +81,5 @@ NavigationPane {
             id: myCamera
             content: MyCameraView {}
         }
-        
     ]
 }

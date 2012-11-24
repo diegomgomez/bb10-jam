@@ -9,15 +9,18 @@
 #include <bb/cascades/ListView>
 #include <bb/cascades/GroupDataModel>
 #include <bb/cascades/multimedia/Camera>
+#include <bb/system/SystemDialog>
 #include <bb/data/JsonDataAccess>
 
 using namespace bb::cascades;
+using namespace bb::system;
 
 Spore::Spore(bb::cascades::Application *app)
 : QObject(app)
 {
     // create scene document from main.qml asset
     // set parent to created document to ensure it exists for the whole application lifetime
+	//qmlRegisterType<SystemDialog>("my.systemDialogs",1,0,"SystemDialog");
     QmlDocument *qml = QmlDocument::create("asset:///main.qml").parent(this);
     qml->setContextProperty("spore", this);
 
