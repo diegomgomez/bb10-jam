@@ -7,7 +7,6 @@ TabbedPane {
     
     Tab {
         title: "Explore"
-        
 	    content: Explore{}
     }
     
@@ -19,50 +18,6 @@ TabbedPane {
     Tab {
         title: "Account"
         content: AccountMain {}
-    }
-    
-    attachedObjects: [
-        ComponentDefinition {
-            id: secondPageDefinition
-            content: Page {
-                property alias text: lblText.text
-                property alias image: imgView.imageSource
-                id: pgDetail
-                paneProperties: NavigationPaneProperties {
-                    backButton: ActionItem {
-                        onTriggered: { navigationPane.pop(); }
-                    }
-                }
-                content: Container {
-                    layout: StackLayout {
-                    }
-                    Label {
-                        id: lblText
-                        textStyle.base: SystemDefaults.TextStyles.TitleText
-                        //textStyle.color: Color.Yellow
-                        horizontalAlignment: HorizontalAlignment.Center
-                    }
-                    ImageView {
-                        id: imgView
-                        scalingMethod: ScalingMethod.AspectFit
-                        layoutProperties: StackLayoutProperties {
-                            spaceQuota: 1.0 // the image fills rest of the Page
-
-                        }
-                        verticalAlignment: VerticalAlignment.Center
-                        horizontalAlignment: HorizontalAlignment.Center
-                    }
-                }
-            }
-        }
-    ]
-    
-    function setDetailItem(item) {
-        // show detail page
-        var page = secondPageDefinition.createObject();
-        page.text = item.text
-        page.image = item.image
-        navigationPane.push(page)
     }
     
     onCreationCompleted: {

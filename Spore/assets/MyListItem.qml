@@ -6,15 +6,10 @@ Container {
     layout: DockLayout {
     }
     
-    Container {
-        // this container is used to show selection background when item is selected
-        id: mySelectionContainer
-        opacity: 0.0
-        verticalAlignment: VerticalAlignment.Fill
-        horizontalAlignment: HorizontalAlignment.Fill
-    }
-    
     Container { 
+        id: item
+        scaleX: 0.9
+        scaleY: 0.9
         verticalAlignment: VerticalAlignment.Fill
         horizontalAlignment: HorizontalAlignment.Fill
         topPadding: 5
@@ -44,7 +39,13 @@ Container {
 
     // Set visual appearance of activated and selected item.
     function setHighlight(active) {
-        mySelectionContainer.opacity = active? 1.0: 0.0;
+        if (active) {
+            item.scaleX = 1.0;
+            item.scaleY = 1.0;
+        } else {
+            item.scaleX = 0.9;
+            item.scaleY = 0.9;
+        }
     }
 
     // Signal handler for list item activation.
