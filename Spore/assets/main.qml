@@ -41,22 +41,12 @@ TabbedPane {
     
     Tab {
         title: "Sell"
-        
-        content: Page {
-            content: Label {
-                text: "This is tab 2."
-            }
-        }
+        content: SellMain {}
     }
     
     Tab {
         title: "Account"
-        
-        content: Page {
-            content: Label {
-                text: "This is tab 3."
-            }
-        }
+        content: AccountMain {}
     }
     
     attachedObjects: [
