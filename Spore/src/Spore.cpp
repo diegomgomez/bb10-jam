@@ -1,11 +1,14 @@
 // List with context menu project template
 #include "Spore.hpp"
 
+#include <bb/system/InvokeManager.hpp>
+#include <bb/system/InvokeRequest.hpp>
 #include <bb/cascades/Application>
 #include <bb/cascades/QmlDocument>
 #include <bb/cascades/AbstractPane>
 #include <bb/cascades/ListView>
 #include <bb/cascades/GroupDataModel>
+#include <bb/cascades/multimedia/Camera>
 #include <bb/data/JsonDataAccess>
 
 using namespace bb::cascades;
@@ -16,6 +19,7 @@ Spore::Spore(bb::cascades::Application *app)
     // create scene document from main.qml asset
     // set parent to created document to ensure it exists for the whole application lifetime
     QmlDocument *qml = QmlDocument::create("asset:///main.qml").parent(this);
+    qml->setContextProperty("spore", this);
 
     // create root object for the UI
     AbstractPane *root = qml->createRootObject<AbstractPane>();

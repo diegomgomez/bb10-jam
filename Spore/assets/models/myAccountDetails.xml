@@ -1,0 +1,13 @@
+<root>
+	<header title="Following"/>
+	<listItem title="MacBook pro 17" distance="500 m"/> 
+	<listItem title="Mountain Bike" distance="430 m"/>
+	<listItem title="Leaked BB DevAlpha" distance="700 m"/>	
+	<header title="Purchased" />
+	<listItem title="Fender Stratocaster" distance="20 m"/> 
+	<listItem title="Honda CBR 900" distance="200 m"/>
+	<listItem title="Smart cover" distance="1.56 Km"/>
+	<header title="Sold"/>
+	<listItem title="Stephen King Books" distance="500 m"/>
+	<listItem title="Table for designers" distance="90 m"/>
+</root>
