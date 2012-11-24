@@ -21,6 +21,9 @@ Container {
             scalingMethod: ScalingMethod.AspectFit
             horizontalAlignment: HorizontalAlignment.Fill
             verticalAlignment: VerticalAlignment.Fill
+            
+            onTouchEnter: setHighlight(true)
+            onTouchExit: setHighlight(false)
         }
         
         // and text below
