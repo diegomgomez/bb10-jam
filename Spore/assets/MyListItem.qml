@@ -2,11 +2,11 @@
 import bb.cascades 1.0
 
 // Item used by the list to present a small thumbnail image with text.
-Container {
+
+Container {    
     layout: DockLayout {
     }
-    
-    Container { 
+    Container {
         id: item
         scaleX: 0.95
         scaleY: 0.95
@@ -16,29 +16,27 @@ Container {
         rightMargin: 0
         verticalAlignment: VerticalAlignment.Fill
         horizontalAlignment: HorizontalAlignment.Fill
-        layout: DockLayout {}
-        
+        layout: DockLayout {
+        }
+
         // show image
         ImageView {
             imageSource: ListItemData.thumb
             scalingMethod: ScalingMethod.AspectFit
             horizontalAlignment: HorizontalAlignment.Fill
             verticalAlignment: VerticalAlignment.Fill
-            
             onTouchEnter: setHighlight(true)
             onTouchExit: setHighlight(false)
         }
-        
+
         // and text below
-        Label {            
+        Label {
             text: ListItemData.text
             textStyle.base: SystemDefaults.TextStyles.BodyText
             horizontalAlignment: HorizontalAlignment.Center
             textStyle {
                 color: Color.White
-                
             }
-            
             verticalAlignment: VerticalAlignment.Bottom
         }
         contextActions: [
@@ -47,6 +45,9 @@ Container {
                 ActionItem {
                     title: "Contact Seller"
                     imageSource: "asset:///images/email.png"
+                    onTriggered: {
+                        console.debug("Contextual menu");
+                    }
                 }
             } // end of ActionSet
         ]
@@ -66,6 +67,12 @@ Container {
     // Signal handler for list item activation.
     ListItem.onActivationChanged: {
         console.debug("ActivationChanged")
-        setHighlight (ListItem.active);
+        setHighlight(ListItem.active);
     }
+    attachedObjects: [
+        ComponentDefinition {
+            id: contactSeller
+            source: "ContactSeller.qml"
+        }
+    ]
 }

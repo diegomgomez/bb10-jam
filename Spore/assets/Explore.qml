@@ -20,8 +20,7 @@ NavigationPane {
                     ListItemComponent {
                         type: "item"
                         // list item GUI appearence component is defined in external MyListItem.qml file
-                        MyListItem {
-                        }
+                        MyListItem {}
                     }
                 ]
                 onTriggered: {

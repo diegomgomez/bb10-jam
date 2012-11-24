@@ -1,13 +1,13 @@
 <root>
 	<header title="Following"/>
-	<listItem title="MacBook pro 17" distance="500 m"/> 
-	<listItem title="Mountain Bike" distance="430 m"/>
-	<listItem title="Leaked BB DevAlpha" distance="700 m"/>	
+	<listItem title="MacBook pro 17" distance="500 m" name="John Doe" price="" nint="24" thumb="asset:///images/picture-thumb.png" image="asset:///images/picture.png" type="1"/> 
+	<listItem title="Mountain Bike" distance="430 m" name="Jane Doe" price="" nint="43" thumb="asset:///images/picture-thumb.png" image="asset:///images/picture.png" type="1"/>
+	<listItem title="Leaked BB DevAlpha" distance="700 m" name="Thorsten Heins" price="" nint="15" thumb="asset:///images/picture-thumb.png" image="asset:///images/picture.png" type="1"/>	
 	<header title="Purchased" />
-	<listItem title="Fender Stratocaster" distance="20 m"/> 
-	<listItem title="Honda CBR 900" distance="200 m"/>
-	<listItem title="Smart cover" distance="1.56 Km"/>
+	<listItem title="Fender Stratocaster" distance="20 m" name="" price="" nint="20" thumb="asset:///images/picture-thumb.png" image="asset:///images/picture.png"  type="2"/> 
+	<listItem title="Honda CBR 900" distance="200 m" name="" price="" nint="2" thumb="asset:///images/picture-thumb.png" image="asset:///images/picture.png"  type="2"/>
+	<listItem title="Smart cover" distance="1.56 Km" name="" price="" nint="25"  thumb="asset:///images/picture-thumb.png" image="asset:///images/picture.png" type="2"/>
 	<header title="Sold"/>
-	<listItem title="Stephen King Books" distance="500 m"/>
-	<listItem title="Table for designers" distance="90 m"/>
+	<listItem title="Stephen King Books" distance="500 m" name="" price="" nint="43" thumb="asset:///images/picture-thumb.png" image="asset:///images/picture.png" type="3"/>
+	<listItem title="Table for designers" distance="90 m" name="" price="" nint="12" thumb="asset:///images/picture-thumb.png" image="asset:///images/picture.png" type="3"/>
 </root>
