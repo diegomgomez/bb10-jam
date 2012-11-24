@@ -1,13 +1,13 @@
 <root>
 	<header title="Following"/>
-	<listItem title="MacBook pro 17" distance="500 m" name="John Doe" price="" nint="24" thumb="asset:///images/mac_thumb.png" image="asset:///images/mac1.png" type="1"/> 
-	<listItem title="Mountain Bike" distance="430 m" name="Jane Doe" price="" nint="43" thumb="asset:///images/bike_thumb.png" image="asset:///images/bike.png" type="1"/>
-	<listItem title="Leaked BB DevAlpha" distance="700 m" name="Thorsten Heins" price="" nint="15" thumb="asset:///images/leakedbb_thumb.png" image="asset:///images/leakedbb.png" type="1"/>	
+	<listItem title="MacBook pro 17" distance="500 m" name="MiniJobs" price="2400$" nint="24" thumb="asset:///images/mac_thumb.png" image="asset:///images/mac1.png" type="1"/> 
+	<listItem title="Mountain Bike" distance="430 m" name="Counter" price="400$" nint="43" thumb="asset:///images/bike_thumb.png" image="asset:///images/bike.png" type="1"/>
+	<listItem title="Leaked BB DevAlpha" distance="700 m" name="Thorsten Heins" price="800$" nint="15" thumb="asset:///images/leakedbb_thumb.png" image="asset:///images/leakedbb.png" type="1"/>	
 	<header title="Purchased" />
-	<listItem title="Fender Stratocaster" distance="20 m" name="" price="" nint="20" thumb="asset:///images/strato_thumb.png" image="asset:///images/strato.png"  type="2"/> 
-	<listItem title="Honda CBR 900" distance="200 m" name="" price="" nint="2" thumb="asset:///images/honda_thumb.png" image="asset:///images/honda.png"  type="2"/>
-	<listItem title="Smart cover" distance="1.56 Km" name="" price="" nint="25"  thumb="asset:///images/cover_thumb.png" image="asset:///images/cover.png" type="2"/>
+	<listItem title="Fender Stratocaster" distance="20 m" name="Jimmy" price="540$" nint="20" thumb="asset:///images/strato_thumb.png" image="asset:///images/strato.png"  type="2"/> 
+	<listItem title="Honda CBR 900" distance="200 m" name="Honda" price="3500$" nint="2" thumb="asset:///images/honda_thumb.png" image="asset:///images/honda.png"  type="2"/>
+	<listItem title="Smart cover" distance="1.56 Km" name="iScratch" price="30$" nint="25"  thumb="asset:///images/cover_thumb.png" image="asset:///images/cover.png" type="2"/>
 	<header title="Sold"/>
-	<listItem title="Stephen King Books" distance="500 m" name="" price="" nint="43" thumb="asset:///images/books_thumb.png" image="asset:///images/books.png" type="3"/>
-	<listItem title="Table for designers" distance="90 m" name="" price="" nint="12" thumb="asset:///images/table_thumb.png" image="asset:///images/table.png" type="3"/>
+	<listItem title="Stephen King Books" distance="500 m" name="Stephy" price="20$" nint="43" thumb="asset:///images/books_thumb.png" image="asset:///images/books.png" type="3"/>
+	<listItem title="Table for designers" distance="90 m" name="furniture-o-rama" price="150$" nint="12" thumb="asset:///images/table_thumb.png" image="asset:///images/table.png" type="3"/>
 </root>
