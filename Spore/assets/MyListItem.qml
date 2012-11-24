@@ -43,22 +43,10 @@ Container {
         }
         contextActions: [
             ActionSet {
-                title: "Contact"
+                title: "Item actions"
                 ActionItem {
-                    title: "Send an Email"
+                    title: "Contact Seller"
                     imageSource: "asset:///images/email.png"
-                }
-                ActionItem {
-                    title: "Start a Chat"
-                    imageSource: "asset:///images/chat.png"
-                }
-                ActionItem {
-                    title: "Start a Video Conference"
-                    imageSource: "asset:///images/video.png"
-                }
-                ActionItem {
-                    title: "Delete"
-                    imageSource: "asset:///images/delete.png"
                 }
             } // end of ActionSet
         ]
