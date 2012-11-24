@@ -8,35 +8,7 @@ TabbedPane {
     Tab {
         title: "Explore"
         
-	    content: Page {
-	        id: pgMain
-	        content: Container {
-	            layout: DockLayout {
-	            }
-	            ListView {
-	                id: listView
-	                // set object name to let listView to be discoverable from C++
-	                objectName: "listView"
-	                layout: GridListLayout {}
-	                listItemComponents: [
-	                    // define component which will represent list item GUI appearence
-	                    ListItemComponent {
-	                        type: "item"
-	                        // list item GUI appearence component is defined in external MyListItem.qml file
-	                        MyListItem {}
-	                    }
-	                ]
-	                onTriggered: {
-	                    console.log("selected_index: " + indexPath)
-	                    var curr_item = dataModel.data(indexPath)
-	                    // show detail page for selected item
-	                    setDetailItem(curr_item)
-	                }
-	                horizontalAlignment: HorizontalAlignment.Center
-	                verticalAlignment: VerticalAlignment.Center
-	            }
-	        }
-	    }
+	    content: Explore{}
     }
     
     Tab {
@@ -94,6 +66,7 @@ TabbedPane {
             }
         }
     ]
+    
     function setDetailItem(item) {
         // show detail page
         var page = secondPageDefinition.createObject();
@@ -101,6 +74,7 @@ TabbedPane {
         page.image = item.image
         navigationPane.push(page)
     }
+    
     onCreationCompleted: {
         // this slot is called when declarative scene is created
         // write post creation initialization here
@@ -108,6 +82,6 @@ TabbedPane {
 
         // enable layout to adapt to the device rotation
         // don't forget to enable screen rotation in bar-bescriptor.xml (Application->Orientation->Auto-orient)
-        OrientationSupport.supportedDisplayOrientation = SupportedDisplayOrientation.All;
+        OrientationSupport.supportedDisplayOrientation = SupportedDisplayOrientation.DisplayPortrait;
     }
 }

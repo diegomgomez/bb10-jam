@@ -14,31 +14,32 @@ Container {
         horizontalAlignment: HorizontalAlignment.Fill
     }
     
-    Container {
-        leftMargin: 2.0
-        rightMargin: 2.0
-        topMargin: 2.0
-        bottomMargin: 2.0
+    Container { 
         verticalAlignment: VerticalAlignment.Fill
         horizontalAlignment: HorizontalAlignment.Fill
+        topPadding: 5
+        layout: DockLayout {}
         
         // show image
         ImageView {
             imageSource: ListItemData.thumb
-            scalingMethod: ScalingMethod.AspectFill
-            layoutProperties: StackLayoutProperties {
-                spaceQuota: 1.0
-            }
+            scalingMethod: ScalingMethod.AspectFit
             horizontalAlignment: HorizontalAlignment.Fill
             verticalAlignment: VerticalAlignment.Fill
         }
         
         // and text below
-        //Label {
-        //    text: ListItemData.text
-        //    textStyle.base: SystemDefaults.TextStyles.SmallText
-        //    horizontalAlignment: HorizontalAlignment.Center
-        //}
+        Label {            
+            text: ListItemData.text
+            textStyle.base: SystemDefaults.TextStyles.BodyText
+            horizontalAlignment: HorizontalAlignment.Center
+            textStyle {
+                color: Color.White
+                
+            }
+            
+            verticalAlignment: VerticalAlignment.Bottom
+        }
     }
 
     // Set visual appearance of activated and selected item.
